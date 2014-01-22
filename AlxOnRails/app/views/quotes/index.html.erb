@@ -2,6 +2,10 @@
 
   <span class="title"><%= @title %></span>
 
+  <div class="new_quote">
+    <%= link_to '+', new_quote_path %>
+  </div>
+
   <% @quotes.each do |quote| %>
 
     <span class="text"><%= link_to quote.text, quote.url %></span>
@@ -18,8 +22,5 @@
     </ul>
 
   <% end %>
-  
-  <div class="new_quote">
-    <%= link_to 'Add Quote', new_quote_path %>
-  </div>
+
 </div>
