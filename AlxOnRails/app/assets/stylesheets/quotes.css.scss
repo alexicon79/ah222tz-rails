@@ -1,0 +1,93 @@
+// Place all the styles related to the Quotes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.quotes {
+
+	#quote_wrapper {
+		font-family: "Georgia";
+		width: 60%;
+		margin: 0 auto;
+		padding: 40px 0;
+	}
+	
+	span.title {
+		font-size: 2em;
+		background-color: #ddd;
+		padding: 3px;
+	}
+
+	div.new_quote a {
+		margin-top: 70px;
+		display: block;
+		width: 100px;
+		height: 30px;
+		background-color: #9E9E3E;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 2px;
+		text-decoration: none;
+		color: #eee;
+		font-family: "Helvetica";
+	}
+
+	span.text {
+		display: block;
+		padding: 60px 0 10px 0;
+		font-size: 40px;
+		line-height: 40px;
+		font-style: italic;
+	}
+
+	span.text a {
+		text-decoration: none;
+	}
+
+	span.text:before {
+		content: "\”";
+		color: #cccc7e;
+		font-family: "Georgia";
+		font-style: normal;
+		font-size: 2em;
+		position: relative;
+		top: 24px;
+		padding-right: 10px;
+	}
+
+	ul.quote_info {
+		font-family: "Georgia";
+		list-style: none;
+		margin-left: -38px;
+	}
+
+	ul.quote_info li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	ul.quote_info li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	// #rating_01 {
+	// 	background-color: red;
+	// }
+
+	// #rating_02 {
+	// 	background-color: green;
+	// }
+
+	ul.list_actions {
+		list-style: none;
+		margin-left: -38px;
+		font-size: 8px;
+	}
+
+
+	ul.list_actions li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+}

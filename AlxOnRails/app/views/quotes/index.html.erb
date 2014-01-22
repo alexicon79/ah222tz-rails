@@ -1,0 +1,25 @@
+<div id='quote_wrapper'>
+
+  <span class="title"><%= @title %></span>
+
+  <% @quotes.each do |quote| %>
+
+    <span class="text"><%= link_to quote.text, quote.url %></span>
+
+    <ul class='quote_info'>
+      <li class="author"><strong>Author: </strong><%= quote.author %></li>
+      <li class="rating" id='rating_0<%= quote.rating %>'><strong>Rating: </strong><%= quote.rating %></li>
+      <li class="count"><strong>Character Count: </strong><%= quote.text.length %>
+    </ul>
+
+    <ul class='list_actions'>
+      <li><%= link_to 'Edit', edit_quote_path(quote) %></li>
+      <li><%= link_to 'Delete', quote, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+
+  <% end %>
+  
+  <div class="new_quote">
+    <%= link_to 'Add Quote', new_quote_path %>
+  </div>
+</div>
