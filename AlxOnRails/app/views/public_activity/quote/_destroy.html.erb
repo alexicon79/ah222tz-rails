@@ -1,0 +1,5 @@
+<% if activity.trackable %>
+	<li>The quote <em>"<%= activity.trackable.text %>"</em> was deleted by you <%= time_ago_in_words(activity.created_at) %> ago.</li>
+<% else %>
+  	<li>A quote was deleted by you <%= time_ago_in_words(activity.created_at) %> ago.</li>
+<% end %>

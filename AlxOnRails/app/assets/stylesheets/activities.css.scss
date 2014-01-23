@@ -1,0 +1,46 @@
+// Place all the styles related to the activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.activities {
+
+	h1 {
+		font-family: "Georgia";
+		font-size: 3em;
+	}
+
+	#activity_wrapper {
+		padding-top: 40px;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	ul {
+		list-style: none;
+		margin-left: -50px;
+		margin-bottom: 20px;
+	}
+	
+	li {
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+
+		padding: 10px;
+		background-color: #eee;
+	}
+
+	li:before {
+		content: "» ";
+	}
+
+	li:first-child{
+		border-top: 1px solid #ddd;
+	}
+
+
+	li:nth-of-type(2){
+		background-color: #fff;
+	}
+
+}

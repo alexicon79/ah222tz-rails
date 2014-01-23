@@ -1,0 +1,11 @@
+<div id='activity_wrapper'>
+
+	<h1>Activities</h1>
+		<ul>
+			<% @activities.each do |activity| %>
+	  			<%= render_activity activity %>
+			<% end %>
+		</ul>
+	<%= link_to 'Back', quotes_path %>
+
+</div>

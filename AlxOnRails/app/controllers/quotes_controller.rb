@@ -2,7 +2,7 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    @quotes = Quote.all
+    @quotes = Quote.find(:all, :order => 'created_at DESC')
     @title = "Favorite Quotes"
     respond_to do |format|
       format.html # index.html.erb
@@ -44,6 +44,7 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       if @quote.save
+        @quote.create_activity :create, owner: current_user
         format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
         format.json { render json: @quote, status: :created, location: @quote }
       else
@@ -60,6 +61,7 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       if @quote.update_attributes(params[:quote])
+        @quote.create_activity :update, owner: current_user
         format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
         format.json { head :no_content }
       else
